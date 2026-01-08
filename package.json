@@ -1,20 +1,25 @@
 {
-    "name": "@chriscodesthings/stub-repo",
+    "name": "@chriscodesthings/parse-number",
     "version": "0.1.0",
-    "description": "npm package template",
+    "description": "A numeric sanitizer that fixes Number() edge cases, and allows for percentage",
     "keywords": [
-        "stub",
-        "package",
-        "template"
+        "number",
+        "parse",
+        "sanitizer",
+        "validation",
+        "extractor",
+        "percentage"
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/ChrisCodesThings/stub-repo.git"
+        "url": "git+https://github.com/ChrisCodesThings/parse-number.git"
     },
     "bugs": {
-        "url": "https://github.com/ChrisCodesThings/stub-repo/issues"
+        "url": "https://github.com/ChrisCodesThings/parse-number/issues"
     },
-    "dependencies": {},
+    "dependencies": {
+        "@chriscodesthings/is": "*"
+    },
     "devDependencies": {
         "auto-changelog": "^2.4.0",
         "typescript": "^5.4.5",

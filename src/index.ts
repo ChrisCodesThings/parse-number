@@ -1,1 +1,1 @@
-export * from './stubRepo.js';
+export { parseNumber as default } from './parseNumber.js';
