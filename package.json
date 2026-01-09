@@ -1,6 +1,6 @@
 {
     "name": "@chriscodesthings/parse-number",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "A numeric sanitizer that fixes Number() edge cases, and allows for percentage",
     "keywords": [
         "number",
