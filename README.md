@@ -22,7 +22,7 @@ npm install @chriscodesthings/parse-number
 
 ## Usage
 
-### Node / Vanilla / CDN
+### Node / CDN
 
 ```js
 // Node
@@ -59,6 +59,8 @@ Returns a `number`. Returns `NaN` if the input is non-numeric, a blank string, o
 ## Examples
 
 ```js
+import parseNumber from '@chriscodesthings/parse-number';
+
 parseNumber(123);      // 123
 parseNumber("123");    // 123
 parseNumber("  45  "); // 45
