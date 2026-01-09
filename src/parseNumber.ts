@@ -1,9 +1,11 @@
-/**
- * A simple hello world function.
- */
-
 import * as is from '@chriscodesthings/is';
 
+/**
+ * A numeric sanitizer that fixes Number() edge cases, and allows for percentage
+ *
+ * @param x - The value to parse
+ * @returns The parsed number
+ */
 export const parseNumber = (x: any): number => {
 
     // Already a number (but not infinity or anything weird)

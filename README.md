@@ -1,80 +1,77 @@
-# stub-repo <br> [![Test workflow status](https://github.com/ChrisCodesThings/stub-repo/actions/workflows/test.yml/badge.svg)](../../actions/workflows/test.yml) [![NPM Version](https://img.shields.io/npm/v/@chriscodesthings/stub-repo)](https://www.npmjs.com/package/@chriscodesthings/stub-repo) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+# parse-number <br> [![Test workflow status](https://github.com/ChrisCodesThings/parse-number/actions/workflows/test.yml/badge.svg)](../../actions/workflows/test.yml) [![NPM Version](https://img.shields.io/npm/v/@chriscodesthings/parse-number)](https://www.npmjs.com/package/@chriscodesthings/parse-number) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-> **npm package template**
+> **A numeric sanitizer that fixes Number() edge cases and allows for percentages.**
 
 ## Description
 
-Does what it says on the tin.
+A utility function that parses inputs into numbers while specifically handling edge cases like "Infinity", whitespace, and percentage strings.
 
 ### See...
-- [Install/Usage](#install "Install and Usage")
-- [Types](#types "Types")
+- [Install/Usage](#install-from-npm "Install and Usage")
 - [Syntax](#syntax "Syntax")
 - [Examples](#examples "Examples")
 - [See Also](#see-also "See Also")
 
 ---
 
-## Install
+## Install from NPM
 
 ```sh
-npm install --save @chriscodesthings/stub-repo
+npm install @chriscodesthings/parse-number
 ```
 
 ## Usage
 
-```js
-import stubRepo from '@chriscodesthings/stub-repo';
-
-console.log(stubRepo("hello world!"));
-// => true
-```
-
-## Types
-
-> This package uses types!
-
-### Available Types
-
-These types are made available:
-
-```ts
-export type myType = any;
-```
-
-### Using Types
-
-To use the types in your TypeScript project:
+### Node / Vanilla / CDN
 
 ```js
-import type { myType } from '@chriscodesthings/stub-repo';
+// Node
+import parseNumber from '@chriscodesthings/parse-number';
 
-const myVar: myType = "foo";
+// ... or ... //
+
+// jsDelivr
+import parseNumber from 'https://cdn.jsdelivr.net/npm/@chriscodesthings/parse-number';
+
+// ... or ... //
+
+// Unpkg
+import parseNumber from 'https://unpkg.com/@chriscodesthings/parse-number';
+
+
+console.log(parseNumber("50%")); // 50
 ```
 
 ## Syntax
 
 ```js
-stubRepo(myVar);
+parseNumber(x);
 ```
 
 ### Parameters
 
-- *myVar*: any
+- *x*: any - The value to parse into a number.
 
 ### Return Value
 
-Returns something probably.
+Returns a `number`. Returns `NaN` if the input is non-numeric, a blank string, or "Infinity".
 
 ## Examples
 
 ```js
-// This is how you could use this in your code. 
+parseNumber(123);      // 123
+parseNumber("123");    // 123
+parseNumber("  45  "); // 45
+parseNumber("75%");    // 75
+parseNumber("");       // NaN
+parseNumber("Infinity"); // NaN
 ```
 
 ## See Also...
 
-- [**stub-repo**: npm package template](https://github.com/ChrisCodesThings/stub-repo "npm package template")
-- [**stub-repo**: npm package template](https://github.com/ChrisCodesThings/stub-repo "npm package template")
-- [**stub-repo**: npm package template](https://github.com/ChrisCodesThings/stub-repo "npm package template")
-- [**stub-repo**: npm package template](https://github.com/ChrisCodesThings/stub-repo "npm package template")
+- [**is**: Type checking utilities](https://github.com/ChrisCodesThings/is "Type checking utilities")
+- [**color-utils**: A collection of lightweight utilities for color identification, conversion, and simple manipulation](https://github.com/ChrisCodesThings/color-utils "A collection of lightweight utilities for color identification, conversion, and simple manipulation")
+
+## License
+
+MIT © ChrisCodesThings
