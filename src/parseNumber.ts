@@ -18,14 +18,14 @@ export const parseNumber = (x: any): number => {
         return NaN;
     }
 
-    // Might have missed a string "Infinity" here
-    if (x === 'Infinity' || x === '-Infinity') {
-        return NaN;
-    }
-
     // Whitespace/blank string check
     x = x.trim();
     if (x.length === 0) {
+        return NaN;
+    }
+
+    // Might have missed a string "Infinity" here
+    if (x === 'Infinity' || x === '-Infinity') {
         return NaN;
     }
 

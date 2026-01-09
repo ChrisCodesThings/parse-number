@@ -42,7 +42,8 @@ describe('parseNumber', () => {
         it('should return NaN for Infinity', () => {
             expect(parseNumber(Infinity)).toBeNaN();
             expect(parseNumber(-Infinity)).toBeNaN();
-            expect(parseNumber('Infinity')).toBeNaN();
+            expect(parseNumber('Infinity')).toBeNaN(); // String infinity
+            expect(parseNumber(' Infinity ')).toBeNaN(); // String infinity with whitespace
         });
 
         it('should return NaN for non-numeric strings', () => {
