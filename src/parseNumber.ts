@@ -1,4 +1,4 @@
-import * as is from '@chriscodesthings/is';
+import { isNum, isStr } from '@chriscodesthings/is';
 
 /**
  * A numeric sanitizer that fixes Number() edge cases, and allows for percentage
@@ -9,12 +9,12 @@ import * as is from '@chriscodesthings/is';
 export const parseNumber = (x: any): number => {
 
     // Already a number (but not infinity or anything weird)
-    if (is.isNum(x)) {
+    if (isNum(x)) {
         return x;
     }
 
     // If not string, nothing we can do with it
-    if (!is.isStr(x)) {
+    if (!isStr(x)) {
         return NaN;
     }
 
