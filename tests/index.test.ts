@@ -17,7 +17,9 @@ describe('parseNumber', () => {
             expect(parseNumber('1.5')).toBe(1.5);
         });
 
-        it('should handle scientific notation', () => {
+        it('should handle alternate number systems', () => {
+            expect(parseNumber('0xabcd')).toBe(43981);
+            expect(parseNumber('0b1001')).toBe(9);
             expect(parseNumber('1e5')).toBe(100000);
             expect(parseNumber(1e5)).toBe(100000);
         });

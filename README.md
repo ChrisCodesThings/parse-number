@@ -64,6 +64,7 @@ import parseNumber from '@chriscodesthings/parse-number';
 parseNumber(123);      // 123
 parseNumber("123");    // 123
 parseNumber("  45  "); // 45
+parseNumber("0xff");   // 255
 parseNumber("75%");    // 75
 parseNumber("");       // NaN
 parseNumber("Infinity"); // NaN
