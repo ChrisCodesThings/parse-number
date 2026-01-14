@@ -6,7 +6,7 @@ import { isNum, isStr } from '@chriscodesthings/is';
  * @param x - The value to parse
  * @returns The parsed number
  */
-export const parseNumber = (x: any): number => {
+export const parseNumber = (x: number | string): number => {
 
     // Already a number (but not infinity or anything weird)
     if (isNum(x)) {
